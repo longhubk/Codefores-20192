@@ -15,6 +15,20 @@ void enterArr(int * arr, int num){
     cin >> arr[index];
   }
 }
+bool check(int * arr1, int * arr2, int num){
+  int count = 0;
+  for(int index = 0; index < num; ++index){
+    if(arr1[index] == arr2[index])
+      count++;
+  }
+  if(count == num)
+    return true;
+  else
+  {
+    return false;
+  }
+  
+}
 
 void findPermutation(int * arr, int left,  int right){
 
@@ -26,6 +40,9 @@ void findPermutation(int * arr, int left,  int right){
     {
       swap(arr[left], arr[index]); //!swap
       findPermutation(arr, left+1, right); //!call recursive
+      int arr2[3] = {2,3,1};
+      if(check(arr, arr2, 3))
+      
       swap(arr[index], arr[left]); //!back track
     }
     
