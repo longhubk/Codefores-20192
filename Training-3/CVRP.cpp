@@ -72,7 +72,7 @@ bool check_Y(int v, int k){               //_diem_dau_tien_cua_lo_trinh_xe_thu_k
   if(load[k] > Q) return false;
   else return true;
 }
-void Try_Y(int k){                        //_thu_gia_tri_cho_y[k]_y[1]_y[2]_y[3]_...._y[N];
+void Try_Y(int k){                        //_thu_gia_tri_cho_y[k]_y[1]_y[2]_y[3]_...._y[K];
   for(int v = y[k-1]+1; v <= N; v++ ){
     if(check_Y(v, k)){                    //_y_co_phu_hop_gan_vao_k_hay_khong
       y[k] = v; 
